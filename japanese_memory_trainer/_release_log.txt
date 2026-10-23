@@ -1,0 +1,258 @@
+[2026-10-04 21:34:41.06] release start 
+Resolving dependencies...
+Downloading packages...
+  characters 1.4.0 (1.4.1 available)
+  clock 1.1.2 (1.1.3 available)
+  flutter_lints 5.0.0 (6.0.0 available)
+  lints 5.1.1 (6.1.0 available)
+  matcher 0.12.17 (0.12.20 available)
+  material_color_utilities 0.11.1 (0.13.1 available)
+  meta 1.17.0 (1.19.0 available)
+  platform 3.1.6 (3.2.0 available)
+  shared_preferences_android 2.4.23 (2.4.28 available)
+  stack_trace 1.12.1 (1.12.2 available)
+  test_api 0.7.7 (0.7.14 available)
+  vector_math 2.2.0 (2.4.3 available)
+Got dependencies!
+12 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+[preview] 
+00:00 +0: loading G:/AntigravityTest/FLUTTER/japanese_memory_trainer/preview/preview_test.dart
+00:00 +0: capture Haru Play Store assets
+
+Warning: A call to tap() with finder "Found 1 widget with key [<'listening-answer-2'>]: [
+  OutlinedButton-[<'listening-answer-2'>](style: ButtonStyle#10e11(backgroundColor: WidgetStatePropertyAll(Color(alpha: 1.0000, red: 1.0000, green: 0.9882, blue: 0.9608, colorSpace: ColorSpace.sRGB)), foregroundColor: WidgetStateMapper<Color?>({WidgetState.disabled: Color(alpha: 1.0000, red: 0.1216, green: 0.1647, blue: 0.2667, colorSpace: ColorSpace.sRGB), WidgetState.any: null}), padding: WidgetStatePropertyAll(EdgeInsets.all(18.0)), mouseCursor: WidgetStateMapper<MouseCursor?>({WidgetState.disabled: null, WidgetState.any: null}), alignment: Alignment.centerLeft), dependencies: [IconTheme, InheritedCupertinoTheme, MediaQuery, _InheritedTheme, _LocalizationsScope-[GlobalKey#245c8], _ScrollableScope], state: _ButtonStyleState#f04d1),
+]" derived an Offset (Offset(196.4, 705.5)) that would not hit test on the specified widget.
+Maybe the widget is actually off-screen, or another widget is obscuring it, or the widget cannot receive pointer events.
+Indeed, Offset(196.4, 705.5) is outside the bounds of the root of the render tree, Size(392.7, 698.2).
+The finder corresponds to this RenderBox: RenderSemanticsAnnotations#a51ad relayoutBoundary=up6
+The hit test result at that offset is: HitTestResult(HitTestEntry<HitTestTarget>#82a8e(_ReusableRenderView#9892d), HitTestEntry<HitTestTarget>#15345(<AutomatedTestWidgetsFlutterBinding>))
+#0      WidgetController._getElementPoint (package:flutter_test/src/controller.dart:2081:25)
+#1      WidgetController.getCenter (package:flutter_test/src/controller.dart:1865:12)
+#2      WidgetController.tap (package:flutter_test/src/controller.dart:1045:7)
+#3      main.<anonymous closure> (file:///G:/AntigravityTest/FLUTTER/japanese_memory_trainer/preview/preview_test.dart:82:18)
+<asynchronous suspension>
+#4      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#5      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)
+<asynchronous suspension>
+#6      StackZoneSpecification._registerCallback.<anonymous closure> (package:stack_trace/src/stack_zone_specification.dart:114:42)
+<asynchronous suspension>
+To silence this warning, pass "warnIfMissed: false" to "tap()".
+To make this warning fatal, set WidgetController.hitTestWarningShouldBeFatal to true.
+
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following StateError was thrown running a test:
+Bad state: No element
+
+When the exception was thrown, this was the stack:
+#0      Iterable.single (dart:core/iterable.dart:694:25)
+#1      WidgetController.element (package:flutter_test/src/controller.dart:868:30)
+#2      WidgetController.dragUntilVisible.<anonymous closure> (package:flutter_test/src/controller.dart:2398:38)
+<asynchronous suspension>
+#3      TestAsyncUtils.guard.<anonymous closure> (package:flutter_test/src/test_async_utils.dart:130:27)
+<asynchronous suspension>
+#4      WidgetController.scrollUntilVisible.<anonymous closure> (package:flutter_test/src/controller.dart:2355:7)
+<asynchronous suspension>
+#5      TestAsyncUtils.guard.<anonymous closure> (package:flutter_test/src/test_async_utils.dart:130:27)
+<asynchronous suspension>
+#6      main.<anonymous closure> (file:///G:/AntigravityTest/FLUTTER/japanese_memory_trainer/preview/preview_test.dart:84:5)
+<asynchronous suspension>
+#7      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#8      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+The test description was:
+  capture Haru Play Store assets
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:03 +0 -1: capture Haru Play Store assets [E]
+  Test failed. See exception logs above.
+  The test description was: capture Haru Play Store assets
+  
+00:03 +0 -1: capture new dashboard and N4 listening
+00:04 +1 -1: capture haru reading
+00:06 +2 -1: capture preview screens
+00:10 +3 -1: capture kanji breakdown
+00:10 +4 -1: capture news
+00:12 +5 -1: Some tests failed.
+PREVIEW_EXITCODE=1 
+[tests] 
+00:00 +0: loading G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart
+00:00 +0: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:00 +1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:01 +2: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:01 +3: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:01 +4: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:02 +5: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:02 +6: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:02 +7: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:02 +8: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:02 +9: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:02 +10: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:02 +11: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:02 +12: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:02 +13: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/data/sentence_bank_test.dart: every chapter has 5 sentence items built from its own words
+00:03 +14: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/data/study_store_test.dart: aspect schedules survive reopening and preserve the weakest due date
+00:03 +15: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/data/study_store_test.dart: review schedule persists, extends intervals and resets with chapter
+00:03 +16: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/data/study_store_test.dart: learned words are saved and reset per chapter
+00:03 +17: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/data/study_store_test.dart: favorite toggles on and off
+00:03 +18: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/data/study_store_test.dart: study mode defaults to choice and is remembered
+00:03 +19: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/models/memory_state_test.dart: MemoryState MemoryState clamps stage below zero to 0
+00:03 +20: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/models/memory_state_test.dart: MemoryState MemoryState clamps stage above seven to 7
+00:03 +21: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/models/memory_state_test.dart: MemoryState MemoryState JSON round trip preserves counts, scores, longTermReachedAt and FSRS fields
+00:03 +22: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/models/memory_state_test.dart: ReviewResult records direction, correctness, responseMs and feeling
+00:03 +23: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/models/word_catalog_test.dart: words are grouped by grade and category in fixed order
+00:03 +24: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/models/word_catalog_test.dart: chapters hold 14 words and the last one keeps the rest
+00:04 +25: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/boss_page_test.dart: BossPage loads boss words and reports conquered and needs-practice counts
+00:05 +26: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/chapter_page_test.dart: list tab toggles favorite and shows details on tap
+00:06 +27: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/daily_recall_page_test.dart: answer stays hidden until revealed and forgotten word is saved
+00:07 +28: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/daily_recall_page_test.dart: answer stays hidden until revealed and forgotten word is saved
+00:07 +29: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/daily_recall_page_test.dart: answer stays hidden until revealed and forgotten word is saved
+00:07 +30: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/daily_recall_page_test.dart: answer stays hidden until revealed and forgotten word is saved
+00:07 +31: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/danger_words_page_test.dart: DangerWordsPage shows descending danger order with score and wrong count
+00:07 +32: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/elementary_navigation_test.dart: all elementary grades open chapters directly
+00:08 +33: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/elementary_navigation_test.dart: all elementary grades open chapters directly
+00:08 +34: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/elementary_navigation_test.dart: all elementary grades open chapters directly
+00:08 +35: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/elementary_navigation_test.dart: all elementary grades open chapters directly
+00:09 +36: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/elementary_navigation_test.dart: all elementary grades open chapters directly
+00:10 +37: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/elementary_navigation_test.dart: all elementary grades open chapters directly
+00:10 +38: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/elementary_navigation_test.dart: all elementary grades open chapters directly
+00:10 +39: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/elementary_navigation_test.dart: all elementary grades open chapters directly
+00:10 +40: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/elementary_navigation_test.dart: all elementary grades open chapters directly
+00:11 +40: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/learn_page_test.dart: speaker callback receives the Japanese word
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: '覚える'
+  Actual: 'おぼえる'
+   Which: is different.
+          Expected: 覚える
+            Actual: おぼえる
+                    ^
+           Differ at offset 0
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure> (file:///G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/learn_page_test.dart:54:5)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/learn_page_test.dart line 54
+The test description was:
+  speaker callback receives the Japanese word
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:11 +40 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/elementary_navigation_test.dart: all elementary grades open chapters directly
+00:11 +40 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/learn_page_test.dart: speaker callback receives the Japanese word [E]
+  Test failed. See exception logs above.
+  The test description was: speaker callback receives the Japanese word
+  
+00:11 +41 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:12 +42 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/listening_page_test.dart: translation is available before answering without unlocking answers
+00:12 +43 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/news_pages_test.dart: list opens article; toggles hide translation and ruby; speak paragraph
+00:13 +44 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/news_pages_test.dart: list opens article; toggles hide translation and ruby; speak paragraph
+00:13 +45 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/news_pages_test.dart: list opens article; toggles hide translation and ruby; speak paragraph
+00:13 +46 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/news_pages_test.dart: list opens article; toggles hide translation and ruby; speak paragraph
+00:14 +47 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/reading_interaction_test.dart: tap a word for meaning, listen to a sentence and answer a question
+00:14 +48 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/review_page_test.dart: review uses four choice buttons and no text field
+00:14 +49 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/review_page_test.dart: wrong choice renders correction feedback
+00:14 +50 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/statistics_page_test.dart: StatisticsPage shows long-term weekly retention danger and JLPT progress
+00:14 +51 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/statistics_page_test.dart: StatisticsPage shows long-term weekly retention danger and JLPT progress
+00:15 +52 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/word_pronunciation_test.dart: 空く speaker uses PDF reading あく instead of ambiguous kanji
+00:16 +53 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/daily_reading_service_test.dart: diary unlocks at seven, persists start date and ends with 365 unique episodes
+00:17 +54 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_repository_test.dart: new day returns at most 5 unseen words
+00:17 +55 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_repository_test.dart: repeated call same day returns the same learned set without adding duplicates
+00:17 +56 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_repository_test.dart: fewer than 5 unseen words returns only remaining words
+00:17 +57 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_repository_test.dart: due words include only nextReviewAt less than or equal to now
+00:17 +58 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_repository_test.dart: danger words are sorted descending by dangerScore
+00:17 +59 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_repository_test.dart: boss words prefer dangerous words reviewed recently
+00:17 +60 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_repository_test.dart: grade words are split into 10 levels in order
+00:17 +61 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_repository_test.dart: new words start from the selected level
+00:17 +62 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_repository_test.dart: finished level continues into the next level of the same grade
+00:17 +63 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_repository_test.dart: default level is N5 Lv.1
+00:17 +64 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_repository_test.dart: changing level before studying reselects today words
+00:17 +65 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_repository_test.dart: changing level after studying keeps today words
+00:17 +66 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_repository_test.dart: level progress counts learned words per level
+00:18 +67 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_session_controller_test.dart: starting quest loads new words first and then due review words
+00:18 +68 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_session_controller_test.dart: submitting an answer updates in-memory state before persistence completes
+00:18 +69 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_session_controller_test.dart: persistence exception sets persistenceError but keeps answered result
+00:18 +70 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_session_controller_test.dart: completing the last question marks session complete
+00:18 +71 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_session_controller_test.dart: multiple immediate questions for one new word stay near the first rating's initial stability
+00:18 +72 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/listening_store_test.dart: misses persist and become due next day, a correct retry clears them
+00:18 +73 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/listening_store_test.dart: every exercise has unique choices, bilingual lines and a valid answer
+00:19 +74 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: first correct instant recall on a brand-new word sets a positive stability and long stage bucket
+00:19 +75 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: wrong answer never grows stability and raises dangerScore
+00:19 +76 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: correct answer taking more than 5000ms raises danger relative to fast answer
+00:19 +77 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: koreanToJapanese correct recall improves recallScore more than japaneseToKorean improves it
+00:19 +78 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: recognition success plus repeated recall failure raises dangerScore
+00:19 +79 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: reviewing well before nextReviewAt still recomputes it but never shortens stability
+00:19 +80 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: stage stays within 0..7 and difficulty within 1..10 across many reviews
+00:19 +81 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: reaching stage 6 or above records longTermReachedAt only once
+00:19 +82 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/news_service_test.dart: bundled feed parses with ruby, levels, translation and key words
+00:19 +83 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/news_service_test.dart: refresh caches remote feed and falls back when offline
+00:19 +84 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/news_service_test.dart: google sheet CSV feed is parsed and enriched with app word levels
+00:19 +85 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/news_service_test.dart: today's article appears only from 7 AM
+00:20 +86 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/quiz_generator_test.dart: Japanese to Korean question always contains the correct answer
+00:20 +87 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/quiz_generator_test.dart: Korean to Japanese question always contains the correct answer
+00:20 +88 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/quiz_generator_test.dart: sentence blank always contains the correct answer
+00:20 +89 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/quiz_generator_test.dart: listening question always contains the correct answer
+00:20 +90 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/quiz_generator_test.dart: all sentence blank questions replace the target inside the sentence
+00:20 +91 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/quiz_generator_test.dart: all seed words in all four quiz types have exactly one correct choice
+00:20 +92 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: interval in days equals stability in days at the default 90% retention target
+00:20 +93 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: initial stability by rating follows Again < Hard < Good < Easy
+00:20 +94 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: nextReviewAt adds the stability-derived interval to the given time
+00:20 +95 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: retrievability decreases as more days pass since the last review
+00:20 +96 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: failing a review (Again) always yields a lower stability than a mid-range value
+00:20 +97 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: recalling successfully never decreases stability
+00:20 +98 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: difficulty stays clamped between 1 and 10 across repeated Again ratings
+00:20 +99 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: stageForIntervalDays buckets match the previous fixed-schedule cutoffs
+00:20 +100 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: isDue returns true when no next review exists or review time passed
+00:21 +101 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/romaji_test.dart: common words convert correctly
+00:21 +102 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/romaji_test.dart: kana and kanji are left untouched
+00:21 +103 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/romaji_test.dart: unfinished input keeps trailing letters when not finalized
+00:21 +104 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/statistics_service_test.dart: statistics snapshot calculates long term danger retention and JLPT progress
+00:21 +105 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/statistics_service_test.dart: streak counts consecutive dates ending today or yesterday
+00:21 +106 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/statistics_service_test.dart: retention rate is zero when no reviews exist
+00:22 +107 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/study_quiz_test.dart: choices contain the answer and 3 other unique words
+00:22 +108 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/study_quiz_test.dart: tiles include every answer character and have 20 slots
+00:22 +109 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/study_quiz_test.dart: typed answers accept word, reading and katakana reading
+00:22 +110 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/widget_test.dart: dashboard and records fit a narrow phone with larger text
+00:23 +111 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/widget_test.dart: app starts on today and opens vocabulary tab
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: exactly one matching candidate
+  Actual: _TextWidgetFinder:<Found 0 widgets with text "JLPT N5": []>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure> (file:///G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/widget_test.dart:38:5)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/widget_test.dart line 38
+The test description was:
+  app starts on today and opens vocabulary tab
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:23 +111 -2: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/widget_test.dart: app starts on today and opens vocabulary tab [E]
+  Test failed. See exception logs above.
+  The test description was: app starts on today and opens vocabulary tab
+  
+00:24 +111 -2: Some tests failed.
+TEST_EXITCODE=1 
+[aab] 
+Running Gradle task 'bundleRelease'...                             16.9s
+√ Built build\app\outputs\bundle\release\app-release.aab (41.2MB)
+BUILD_EXITCODE=0 
+DONE 

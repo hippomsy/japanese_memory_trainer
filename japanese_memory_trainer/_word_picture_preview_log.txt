@@ -1,0 +1,133 @@
+[2026-10-22 21:27:12.25] word picture preview start 
+[analyze] 
+Analyzing 6 items...                                            
+
+warning - The member 'setMockInitialValues' can only be used within 'package:shared_preferences/src/shared_preferences_legacy.dart' or a test - preview\word_picture_preview_test.dart:52:23 - invalid_use_of_visible_for_testing_member
+
+1 issue found. (ran in 9.3s)
+ANALYZE_EXITCODE=1 
+[preview] 
+Resolving dependencies...
+Downloading packages...
+  characters 1.4.0 (1.4.1 available)
+  clock 1.1.2 (1.1.3 available)
+  code_assets 1.2.1 (2.1.0 available)
+  flutter_lints 5.0.0 (6.0.0 available)
+  hooks 2.0.2 (2.2.0 available)
+  jni_flutter 1.0.3 (1.0.4+1 available)
+  lints 5.1.1 (6.1.0 available)
+  matcher 0.12.17 (0.12.20 available)
+  material_color_utilities 0.11.1 (0.13.1 available)
+  meta 1.17.0 (1.19.0 available)
+  objective_c 9.5.0 (9.6.2 available)
+  package_config 2.2.0 (3.0.0 available)
+  platform 3.1.6 (3.2.0 available)
+  record_use 0.6.0 (1.1.1 available)
+  shared_preferences 2.5.5 (2.5.6 available)
+  shared_preferences_android 2.4.23 (2.5.2 available)
+  shared_preferences_foundation 2.5.7 (2.6.0 available)
+  stack_trace 1.12.1 (1.12.2 available)
+  synchronized 3.4.0 (3.5.0 available)
+  test_api 0.7.7 (0.7.15 available)
+  vector_math 2.2.0 (2.4.3 available)
+  vm_service 15.3.0 (15.4.0 available)
+Got dependencies!
+22 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading G:/AntigravityTest/FLUTTER/japanese_memory_trainer/preview/word_picture_preview_test.dart
+00:00 +0: capture word pictures
+00:04 +1: All tests passed!
+PREVIEW_EXITCODE=0 
+[tests] 
+Resolving dependencies...
+Downloading packages...
+  characters 1.4.0 (1.4.1 available)
+  clock 1.1.2 (1.1.3 available)
+  code_assets 1.2.1 (2.1.0 available)
+  flutter_lints 5.0.0 (6.0.0 available)
+  hooks 2.0.2 (2.2.0 available)
+  jni_flutter 1.0.3 (1.0.4+1 available)
+  lints 5.1.1 (6.1.0 available)
+  matcher 0.12.17 (0.12.20 available)
+  material_color_utilities 0.11.1 (0.13.1 available)
+  meta 1.17.0 (1.19.0 available)
+  objective_c 9.5.0 (9.6.2 available)
+  package_config 2.2.0 (3.0.0 available)
+  platform 3.1.6 (3.2.0 available)
+  record_use 0.6.0 (1.1.1 available)
+  shared_preferences 2.5.5 (2.5.6 available)
+  shared_preferences_android 2.4.23 (2.5.2 available)
+  shared_preferences_foundation 2.5.7 (2.6.0 available)
+  stack_trace 1.12.1 (1.12.2 available)
+  synchronized 3.4.0 (3.5.0 available)
+  test_api 0.7.7 (0.7.15 available)
+  vector_math 2.2.0 (2.4.3 available)
+  vm_service 15.3.0 (15.4.0 available)
+Got dependencies!
+22 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/n4_word_picture_test.dart
+00:00 +0: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/n4_word_picture_test.dart: every N4 word has its own picture
+00:00 +1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/n4_word_picture_test.dart: every N4 word has its illustration file
+00:00 +2: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/n4_word_picture_test.dart: every N4 word has its illustration file
+00:00 +3: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/n4_word_picture_test.dart: every N4 word has its illustration file
+00:00 +4: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/n4_wordbook_test.dart: spaced repetition: good answers push the next review further
+00:00 +5: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/n4_word_picture_test.dart: WordPicture shows the illustration image
+00:00 +6: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/n4_word_picture_test.dart: WordPicture shows the illustration image
+00:00 +7: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/n4_word_picture_test.dart: WordPicture shows the illustration image
+00:00 +8: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/n4_word_picture_test.dart: WordPicture shows the illustration image
+00:01 +9: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/n4_wordbook_test.dart: word list plays clips; word game flips cards with clips
+00:02 +10: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/n4_wordbook_test.dart: flashcard rates a word; reading word opens sheet
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following StateError was thrown running a test:
+Bad state: No element
+
+When the exception was thrown, this was the stack:
+#0      Iterable.single (dart:core/iterable.dart:694:25)
+#1      WidgetController.element (package:flutter_test/src/controller.dart:868:30)
+#2      WidgetController.ensureVisible (package:flutter_test/src/controller.dart:2305:32)
+#3      main.<anonymous closure> (file:///G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/n4_wordbook_test.dart:188:18)
+<asynchronous suspension>
+#4      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#5      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+The test description was:
+  flashcard rates a word; reading word opens sheet
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:03 +10 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/n4_wordbook_test.dart: flashcard rates a word; reading word opens sheet [E]
+  Test failed. See exception logs above.
+  The test description was: flashcard rates a word; reading word opens sheet
+  
+00:03 +10 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/n4_wordbook_test.dart: home lists 30 days
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: exactly one matching candidate
+  Actual: _KeyWidgetFinder:<Found 0 widgets with key [<'n4-day-1'>]: []>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure> (file:///G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/n4_wordbook_test.dart:215:5)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/n4_wordbook_test.dart line 215
+The test description was:
+  home lists 30 days
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:04 +10 -2: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/n4_wordbook_test.dart: home lists 30 days [E]
+  Test failed. See exception logs above.
+  The test description was: home lists 30 days
+  
+00:04 +10 -2: Some tests failed.
+TEST_EXITCODE=1 
+DONE 

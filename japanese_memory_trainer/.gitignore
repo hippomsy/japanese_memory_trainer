@@ -1,0 +1,21 @@
+.dart_tool/
+build/
+.packages
+.pub/
+.idea/
+.vscode/
+*.iml
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+.worktrees/
+.superpowers/
+coverage/
+.tools/
+
+# 2026-09-27 배포 서명 키와 테스트/빌드 로그는 저장소에 올리지 않는다.
+android/key.properties
+*.jks
+*.keystore
+_test_log.txt
+_build_log.txt

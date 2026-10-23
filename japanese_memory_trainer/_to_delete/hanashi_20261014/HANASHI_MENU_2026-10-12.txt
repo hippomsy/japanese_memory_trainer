@@ -1,0 +1,12 @@
+2026-10-12 하나시 니홍고 메뉴 추가 (1.0.34+40)
+- 학습 탭 > 영상 > "하나시 니홍고" (NEW)
+- 13화 목록, 화별 YouTube 영상 열기(해당 시간부터), 문장별 원본 장면 열기
+- 대본 붙여넣기: YouTube 스크립트/ .srt / .vtt / 문장 목록 -> 시간 기준 13화 자동 분배, 기기에만 저장
+  (영상 대본 자체는 앱에 포함하지 않음)
+- 문장 듣기(TTS), 천천히, 여기부터 연속 재생, 섀도잉(따라 말할 틈), 속도 조절, 메모(번역) 가리기
+- 문장 길게 눌러 단어 선택 -> 단어장에 담기, 단어 직접 추가
+- 복습: 단어->뜻 / 뜻->단어 / 듣고 맞히기 / 문장 카드(메모 보고 일본어로), 간격 반복 1·2·4·8·16일
+변경 파일: lib/services/hanashi_store.dart, lib/pages/hanashi_pages.dart(신규), lib/pages/study_shell.dart,
+  lib/widgets/study_widgets.dart, pubspec.yaml(url_launcher 추가, 버전), AndroidManifest.xml(https VIEW queries),
+  test/services/hanashi_store_test.dart(신규)
+검증: 이 작업 환경에 Flutter가 없어 컴파일·테스트 미실행 -> _run_tests.bat, _build_aab.bat 실행 필요

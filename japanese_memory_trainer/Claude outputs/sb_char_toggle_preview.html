@@ -1,0 +1,43 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>글자별 선택 미리보기</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F7F3EC;--ink:#1C2340;--soft:#6A7088;--line:#EAE3D6;--sb:#2F7D7A;--sbs:#E2F1EF;--hard:#7B2D8B;--hards:#7B2D8B26}
+*{box-sizing:border-box;margin:0}body{background:#d9d4cb;font-family:'Noto Sans KR',sans-serif;color:var(--ink);display:flex;flex-wrap:wrap;justify-content:center;gap:24px;padding:24px 12px}
+.col{display:flex;flex-direction:column;align-items:center;gap:8px}.cap{font-size:13px;font-weight:700;color:#4a4740;max-width:340px;text-align:center}
+.ph{width:340px;max-width:100%;height:700px;background:var(--paper);border-radius:30px;border:8px solid #222;overflow:hidden;box-shadow:0 18px 40px #0003}
+.ab{padding:16px 16px 4px;display:flex;gap:12px;align-items:flex-start}.ab .bk{font-size:22px}.ab b{font-size:19px;font-weight:900;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:250px}.ab span{font-size:12px;color:var(--soft)}
+.bd{padding:6px 16px;display:flex;flex-direction:column;gap:10px}
+.pg{display:flex;align-items:center;gap:8px;font-weight:800;font-size:13px}.bar{flex:1;height:7px;background:var(--sbs);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%}
+.chips{display:flex;flex-wrap:wrap;gap:6px}.c{padding:5px 12px;border-radius:9px;border:1px solid var(--line);background:#fff;font-size:12px}
+.c.w{color:var(--sb)}.c.w.on{background:var(--sbs);border-color:var(--sb);font-weight:800}.c.h{color:var(--hard)}.c.h.on{background:var(--hards);border-color:var(--hard);font-weight:800}
+.new{position:relative}.new::after{content:'NEW';position:absolute;top:-9px;right:-8px;background:#E2553F;color:#fff;font-size:9px;font-weight:900;padding:1px 5px;border-radius:7px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px}.ko{font-weight:700;font-size:15px;display:flex;justify-content:space-between;gap:8px}.spk{flex:none;width:36px;height:36px;border-radius:50%;background:var(--sbs);display:grid;place-items:center;font-size:15px}
+.ans{border-radius:12px;min-height:54px;padding:8px;display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;background:var(--sbs);align-items:center}
+.ans .ph2{color:var(--soft);font-size:12.5px;padding:6px}
+.t{font-family:'Noto Sans JP';font-size:16px;font-weight:700;padding:8px 11px;border-radius:10px;background:#fff;border:1px solid var(--line)}
+.ch{font-family:'Noto Sans JP';font-size:17px;font-weight:700;width:38px;height:42px;display:grid;place-items:center;border-radius:9px;background:#fff;border:1px solid var(--line)}
+.ans .ch{border:1.5px solid var(--hard);width:32px;height:36px;font-size:15px}.slot{width:32px;height:36px;border-radius:9px;border:1.5px dashed #7B2D8B66}
+.tiles{display:flex;flex-wrap:wrap;gap:7px}.hint{font-size:11px;color:var(--soft)}
+.note{background:#fff6d8;border:1px solid #e9d38a;border-radius:10px;padding:8px 10px;font-size:11.5px;line-height:1.5}
+</style></head><body>
+
+<div class="col"><div class="cap">① 처음 모습: 「낱말 조립」이 선택된 상태, 옆에 「글자별 선택」 버튼</div><div class="ph">
+<div class="ab"><span class="bk">←</span><div><b>〜てもいい / 〜てはいけない</b><span>1단계 · 단어별 조립</span></div></div><div class="bd">
+<div class="pg">1 / 12<div class="bar"><i style="width:8%;background:#2F7D7A"></i></div></div>
+<div class="chips"><span class="c w on">낱말 조립</span><span class="c h new">글자별 선택</span><span class="c">N4 · 〜てもいい / 〜てはいけない</span></div>
+<div class="card"><div class="ko">여기서 사진을 찍어도 됩니까?<span class="spk">🔊</span></div><div class="ans"><span class="ph2">아래 낱말을 순서대로 누르세요</span></div></div>
+<div class="tiles"><span class="t">写真を</span><span class="t">いいですか。</span><span class="t">ここで</span><span class="t">撮っては</span><span class="t">撮っても</span></div>
+<div class="hint">낱말 하나는 함정이에요. 필요 없는 낱말은 남겨 두세요.</div>
+</div></div></div>
+
+<div class="col"><div class="cap">② 「글자별 선택」을 누르면 같은 문장을 한 글자씩</div><div class="ph">
+<div class="ab"><span class="bk">←</span><div><b>〜てもいい / 〜てはいけない</b><span>1단계 · 단어별 조립</span></div></div><div class="bd">
+<div class="pg">1 / 12<div class="bar"><i style="width:8%;background:#7B2D8B"></i></div></div>
+<div class="chips"><span class="c w">낱말 조립</span><span class="c h on">글자별 선택</span><span class="c">N4 · 〜てもいい / 〜てはいけない</span></div>
+<div class="card"><div class="ko">여기서 사진을 찍어도 됩니까?<span class="spk">🔊</span></div>
+<div class="ans" style="background:#7B2D8B12"><span class="ch">こ</span><span class="ch">こ</span><span class="ch">で</span><span class="ch">写</span><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span></div></div>
+<div class="tiles"><span class="ch">い</span><span class="ch">も</span><span class="ch">撮</span><span class="ch">か</span><span class="ch">す</span><span class="ch">て</span><span class="ch">。</span><span class="ch">真</span><span class="ch">い</span><span class="ch">を</span><span class="ch">っ</span><span class="ch">で</span><span class="ch">す</span></div>
+<div class="note">답을 내기 전이면 언제든 「낱말 조립」으로 돌아갈 수 있어요. 다음 문제는 다시 원래 방식으로 시작해요.</div>
+</div></div></div>
+</body></html>

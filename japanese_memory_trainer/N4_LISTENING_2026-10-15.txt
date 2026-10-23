@@ -1,0 +1,8 @@
+2026-10-15 N4 청해 확장 (1.0.37+44)
+- 연습 문제 20개 -> 50개 (직접 만든 30문제 추가, JLPT 기출 아님)
+  유형: 과제 이해, 포인트 이해, 발화 표현(이럴 때 뭐라고?), 즉시 응답, 숫자·날짜·순서
+- 대화 화자별로 TTS 목소리 높이를 다르게(1번째 화자 높게, 2번째 낮게) -> 누가 말하는지 구분
+  변경: lib/services/tts_service.dart(speakListening pitch), lib/pages/listening_page.dart,
+        lib/pages/study_shell.dart, lib/app.dart
+- 문제 데이터: lib/data/listening_bank.dart (추가 스크립트 tool/n4_listening_add_2026-10-15.py, 두 번 실행해도 중복 안 됨)
+- 검증: 이 환경에 Flutter 없음 -> flutter test, _build_aab.bat 필요

@@ -1,0 +1,67 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>짝맞추기 게임 미리보기</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F7F3EC;--ink:#1C2340;--soft:#6A7088;--line:#EAE3D6;--navy:#233A6E;--gold:#D4B26A;--red:#C8402F;--green:#2F7D5B}
+*{box-sizing:border-box;margin:0}body{background:#d9d4cb;font-family:'Noto Sans KR',sans-serif;color:var(--ink);display:flex;flex-wrap:wrap;justify-content:center;gap:24px;padding:24px 12px}
+.col{display:flex;flex-direction:column;align-items:center;gap:8px}.cap{font-size:13px;font-weight:700;color:#4a4740}
+.ph{width:360px;max-width:100%;height:760px;background:var(--paper);border-radius:30px;border:8px solid #222;overflow:hidden;box-shadow:0 18px 40px #0003}
+.ab{display:flex;align-items:center;gap:12px;padding:14px 16px 6px}.ab b{font-size:21px;font-weight:900;display:block}.ab span{font-size:11.5px;color:var(--soft)}
+.tabs{margin:4px 16px 10px;display:flex;background:#fff;border:1px solid var(--line);border-radius:30px;padding:4px}
+.tabs div{flex:1;text-align:center;padding:9px 0;border-radius:24px;font-weight:800;font-size:14px;color:var(--soft)}.tabs .on{background:var(--ink);color:#fff}
+.stats{display:flex;gap:6px;padding:0 16px 8px;align-items:center}.st{flex:1;background:#fff;border:1px solid var(--line);border-radius:12px;text-align:center;padding:5px 0}
+.st small{display:block;font-size:10px;color:var(--soft)}.st b{color:var(--navy);font-size:15px;font-weight:900}.ic{width:30px;text-align:center;color:var(--navy);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;padding:0 16px}
+.cd{height:122px;border-radius:14px;position:relative}
+.bk{background:var(--navy);padding:6px;box-shadow:0 4px 8px #0003}.bk i{display:grid;place-items:center;height:100%;border:1.5px solid #D4B26ACC;border-radius:10px}
+.bk i span{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-family:'Noto Sans JP';font-size:21px;font-weight:700}
+.fr{background:#fff;border:1px solid var(--line);padding:8px;display:flex;flex-direction:column;box-shadow:0 3px 6px #0002}.fr.jp{background:#FFFBF2}
+.tag{align-self:flex-start;font-size:9px;font-weight:800;color:#fff;padding:1px 5px;border-radius:4px}.jp .tag{background:var(--red)}.kr .tag{background:var(--green)}
+.fr .c{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.rd{font-family:'Noto Sans JP';font-size:12px;color:#9A7B4F}.jw{font-family:'Noto Sans JP';font-size:24px;font-weight:900}.kw{font-size:22px;font-weight:900;color:var(--green)}
+.m{border:2.5px solid var(--gold);box-shadow:0 0 14px #D4B26A88}
+.flip{transform:perspective(500px) rotateY(55deg)}
+.fin{margin:0 16px 10px;background:var(--navy);border-radius:16px;padding:12px;display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:13px}
+.fin .tr{font-size:26px}.fin .bt{margin-left:auto;background:var(--gold);color:var(--navy);padding:8px 12px;border-radius:18px;white-space:nowrap}
+.bub{position:absolute;right:-6px;top:-12px;background:#1C2340;color:#fff;font-size:11px;padding:3px 8px;border-radius:10px;white-space:nowrap}
+</style></head><body>
+
+<div class="col"><div class="cap">① 게임 중 · 카드를 뒤집을 때마다 소리</div><div class="ph">
+<div class="ab"><span style="font-size:22px">←</span><div><b>第1章</b><span>N5 · 명사 · 14단어</span></div></div>
+<div class="tabs"><div>단어 목록</div><div>학습</div><div class="on">게임</div></div>
+<div class="stats"><div class="st"><small>시간</small><b>0:42</b></div><div class="st"><small>시도</small><b>7</b></div><div class="st"><small>짝</small><b>2/6</b></div><div class="st"><small>점수</small><b>220</b></div><span class="ic">🔊</span><span class="ic">↻</span></div>
+<div class="grid">
+<div class="cd fr jp m"><span class="tag">日本語</span><div class="c"><span class="rd">みず</span><span class="jw">水</span></div></div>
+<div class="cd bk"><i><span>言</span></i></div>
+<div class="cd fr kr" style="position:relative"><span class="tag">한국어</span><div class="c"><span class="kw">책</span></div><span class="bub">🔊 "책"</span></div>
+<div class="cd bk"><i><span>言</span></i></div>
+<div class="cd fr kr m"><span class="tag">한국어</span><div class="c"><span class="kw">물</span></div></div>
+<div class="cd bk"><i><span>言</span></i></div>
+<div class="cd fr jp" style="position:relative"><span class="tag">日本語</span><div class="c"><span class="rd">ほん</span><span class="jw">本</span></div><span class="bub">🔊 "ほん"</span></div>
+<div class="cd bk"><i><span>言</span></i></div>
+<div class="cd fr jp m"><span class="tag">日本語</span><div class="c"><span class="rd">やま</span><span class="jw">山</span></div></div>
+<div class="cd bk flip"><i><span>言</span></i></div>
+<div class="cd fr kr m"><span class="tag">한국어</span><div class="c"><span class="kw">산</span></div></div>
+<div class="cd bk"><i><span>言</span></i></div>
+</div></div></div>
+
+<div class="col"><div class="cap">② 다 맞혔을 때 · 「한 판 더」로 새 단어 6개</div><div class="ph">
+<div class="ab"><span style="font-size:22px">←</span><div><b>第1章</b><span>N5 · 명사 · 14단어</span></div></div>
+<div class="tabs"><div>단어 목록</div><div>학습</div><div class="on">게임</div></div>
+<div class="stats"><div class="st"><small>시간</small><b>1:18</b></div><div class="st"><small>시도</small><b>11</b></div><div class="st"><small>짝</small><b>6/6</b></div><div class="st"><small>점수</small><b>904</b></div><span class="ic">🔊</span><span class="ic">↻</span></div>
+<div class="fin"><span class="tr">🏆</span>모두 맞혔어요! 1:18 · 시도 11번 · 904점<span class="bt">한 판 더</span></div>
+<div class="grid">
+<div class="cd fr jp m"><span class="tag">日本語</span><div class="c"><span class="rd">みず</span><span class="jw">水</span></div></div>
+<div class="cd fr kr m"><span class="tag">한국어</span><div class="c"><span class="kw">눈</span></div></div>
+<div class="cd fr kr m"><span class="tag">한국어</span><div class="c"><span class="kw">책</span></div></div>
+<div class="cd fr jp m"><span class="tag">日本語</span><div class="c"><span class="rd">め</span><span class="jw">目</span></div></div>
+<div class="cd fr kr m"><span class="tag">한국어</span><div class="c"><span class="kw">물</span></div></div>
+<div class="cd fr jp m"><span class="tag">日本語</span><div class="c"><span class="rd">はな</span><span class="jw">花</span></div></div>
+<div class="cd fr jp m"><span class="tag">日本語</span><div class="c"><span class="rd">ほん</span><span class="jw">本</span></div></div>
+<div class="cd fr kr m"><span class="tag">한국어</span><div class="c"><span class="kw">꽃</span></div></div>
+<div class="cd fr jp m"><span class="tag">日本語</span><div class="c"><span class="rd">やま</span><span class="jw">山</span></div></div>
+<div class="cd fr kr m"><span class="tag">한국어</span><div class="c"><span class="kw">비</span></div></div>
+<div class="cd fr kr m"><span class="tag">한국어</span><div class="c"><span class="kw">산</span></div></div>
+<div class="cd fr jp m"><span class="tag">日本語</span><div class="c"><span class="rd">あめ</span><span class="jw">雨</span></div></div>
+</div></div></div>
+</body></html>

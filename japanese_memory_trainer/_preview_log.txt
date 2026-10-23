@@ -1,0 +1,97 @@
+[2026-09-29 20:11:50.00] preview start 
+00:00 +0: loading G:/AntigravityTest/FLUTTER/japanese_memory_trainer/preview/preview_test.dart
+00:00 +0: capture preview screens
+00:05 +1: All tests passed!
+EXITCODE=0 
+[tests] 
+00:00 +0: loading G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart
+00:00 +0: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:00 +1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:00 +2: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:00 +3: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:00 +4: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:00 +5: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:00 +6: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:00 +7: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:00 +8: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:00 +9: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:01 +10: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:01 +11: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:01 +12: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:01 +13: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:01 +14: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:01 +15: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:01 +16: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:02 +17: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:02 +18: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:02 +19: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/boss_page_test.dart: BossPage loads boss words and reports conquered and needs-practice counts
+00:05 +20: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/chapter_page_test.dart: list tab toggles favorite and shows details on tap
+00:05 +21: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/danger_words_page_test.dart: DangerWordsPage shows descending danger order with score and wrong count
+00:06 +22: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/danger_words_page_test.dart: DangerWordsPage shows descending danger order with score and wrong count
+00:06 +23: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/home_page_test.dart: HomePage shows core memory dashboard labels
+00:06 +24: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/chapter_page_test.dart: assemble mode builds the word from tiles
+00:06 +25: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/home_page_test.dart: HomePage shows study level card and opens level selection
+00:07 +26: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/chapter_page_test.dart: study mode can be changed from the mode chips
+00:07 +27: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/chapter_page_test.dart: auto mode reads Japanese then Korean and moves on
+00:08 +28: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:08 +29: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:10 +30: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:10 +31: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:10 +32: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:10 +33: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:10 +34: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:10 +35: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:10 +36: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:10 +37: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:10 +38: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:10 +39: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:10 +40: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:10 +41: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:10 +42: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:10 +43: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:10 +44: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:10 +45: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:11 +46: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:11 +47: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/statistics_page_test.dart: StatisticsPage shows long-term weekly retention danger and JLPT progress
+00:11 +48: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/statistics_page_test.dart: StatisticsPage shows long-term weekly retention danger and JLPT progress
+00:11 +49: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_session_controller_test.dart: starting quest loads new words first and then due review words
+00:11 +50: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_session_controller_test.dart: submitting an answer updates in-memory state before persistence completes
+00:11 +51: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_session_controller_test.dart: persistence exception sets persistenceError but keeps answered result
+00:11 +52: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_session_controller_test.dart: completing the last question marks session complete
+00:11 +53: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/learning_session_controller_test.dart: multiple immediate questions for one new word stay near the first rating's initial stability
+00:12 +54: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: first correct instant recall on a brand-new word sets a positive stability and long stage bucket
+00:12 +55: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: wrong answer never grows stability and raises dangerScore
+00:12 +56: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: correct answer taking more than 5000ms raises danger relative to fast answer
+00:12 +57: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: koreanToJapanese correct recall improves recallScore more than japaneseToKorean improves it
+00:12 +58: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: recognition success plus repeated recall failure raises dangerScore
+00:12 +59: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: reviewing well before nextReviewAt still recomputes it but never shortens stability
+00:12 +60: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: stage stays within 0..7 and difficulty within 1..10 across many reviews
+00:12 +61: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: reaching stage 6 or above records longTermReachedAt only once
+00:12 +62: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/quiz_generator_test.dart: Japanese to Korean question always contains the correct answer
+00:12 +63: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/quiz_generator_test.dart: Korean to Japanese question always contains the correct answer
+00:12 +64: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/quiz_generator_test.dart: sentence blank always contains the correct answer
+00:12 +65: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/quiz_generator_test.dart: listening question always contains the correct answer
+00:12 +66: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/quiz_generator_test.dart: all sentence blank questions replace the target inside the sentence
+00:12 +67: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/quiz_generator_test.dart: all seed words in all four quiz types have exactly one correct choice
+00:13 +68: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: interval in days equals stability in days at the default 90% retention target
+00:13 +69: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: initial stability by rating follows Again < Hard < Good < Easy
+00:13 +70: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: nextReviewAt adds the stability-derived interval to the given time
+00:13 +71: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: retrievability decreases as more days pass since the last review
+00:13 +72: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: failing a review (Again) always yields a lower stability than a mid-range value
+00:13 +73: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: recalling successfully never decreases stability
+00:13 +74: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: difficulty stays clamped between 1 and 10 across repeated Again ratings
+00:13 +75: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: stageForIntervalDays buckets match the previous fixed-schedule cutoffs
+00:13 +76: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: isDue returns true when no next review exists or review time passed
+00:14 +77: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/romaji_test.dart: common words convert correctly
+00:14 +78: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/romaji_test.dart: kana and kanji are left untouched
+00:14 +79: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/romaji_test.dart: unfinished input keeps trailing letters when not finalized
+00:14 +80: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/statistics_service_test.dart: statistics snapshot calculates long term danger retention and JLPT progress
+00:14 +81: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/statistics_service_test.dart: streak counts consecutive dates ending today or yesterday
+00:14 +82: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/statistics_service_test.dart: retention rate is zero when no reviews exist
+00:15 +83: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/study_quiz_test.dart: choices contain the answer and 3 other unique words
+00:15 +84: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/study_quiz_test.dart: tiles include every answer character and have 20 slots
+00:15 +85: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/study_quiz_test.dart: typed answers accept word, reading and katakana reading
+00:16 +86: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/widget_test.dart: app starts on the grade list
+00:17 +87: All tests passed!
+TEST_EXITCODE=0 
+DONE 

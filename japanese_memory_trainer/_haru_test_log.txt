@@ -1,0 +1,5 @@
+00:00 +0: loading G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/widget_test.dart
+00:00 +0: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/widget_test.dart: dashboard and records fit a narrow phone with larger text
+00:01 +1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:01 +2: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:02 +3: All tests passed!

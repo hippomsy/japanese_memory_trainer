@@ -1,0 +1,54 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3D 조각 미리보기</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F7F3EC;--ink:#1C2340;--soft:#6A7088;--line:#EAE3D6;--sb:#2F7D7A;--sbs:#E2F1EF;--hard:#7B2D8B}
+*{box-sizing:border-box;margin:0}body{background:#d9d4cb;font-family:'Noto Sans KR',sans-serif;color:var(--ink);display:flex;flex-wrap:wrap;justify-content:center;gap:24px;padding:24px 12px}
+.col{display:flex;flex-direction:column;align-items:center;gap:8px}.cap{font-size:13px;font-weight:700;color:#4a4740;text-align:center;max-width:340px}
+.ph{width:350px;max-width:100%;height:700px;background:var(--paper);border-radius:30px;border:8px solid #222;overflow:hidden;box-shadow:0 18px 40px #0003}
+.ab{padding:16px 16px 4px}.ab b{font-size:19px;font-weight:900;display:block}.ab span{font-size:12px;color:var(--soft)}
+.bd{padding:6px 16px;display:flex;flex-direction:column;gap:12px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}.c{padding:5px 12px;border-radius:9px;border:1px solid var(--line);background:#fff;font-size:12px}
+.c.w.on{background:var(--sbs);border-color:var(--sb);color:var(--sb);font-weight:800}.c.h{color:var(--hard)}.c.h.on{background:#7B2D8B26;border-color:var(--hard);font-weight:800}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px}.ko{font-weight:700;font-size:15px}
+.ans{border-radius:12px;min-height:66px;padding:10px 8px 6px;display:flex;flex-wrap:wrap;gap:8px 6px;margin-top:10px;background:var(--sbs);align-items:flex-start}
+.tiles{display:flex;flex-wrap:wrap;gap:12px 9px;perspective:600px}
+/* 3D block */
+.t{--face:#fff;--edge:#B9C4C3;--txt:#1C2340;--bd:var(--edge);position:relative;display:inline-block;padding-bottom:5px;cursor:pointer;animation:pop .45s cubic-bezier(.34,1.56,.64,1) both;transform-origin:bottom center}
+.t i{display:block;position:relative;z-index:1;font-style:normal;font-family:'Noto Sans JP';font-weight:700;font-size:18px;color:var(--txt);padding:8px 12px;border-radius:11px;border:1.2px solid var(--bd);background:linear-gradient(#ffffffaa,transparent 70%),var(--face);text-shadow:0 1px 0 #ffffffb0;transition:transform .09s}
+.t::before{content:'';position:absolute;left:0;right:0;top:5px;bottom:0;border-radius:11px;background:var(--edge);box-shadow:0 4px 6px #00000038}
+.t:active i,.t.pressed i{transform:translateY(4px)}.t.pressed::before{box-shadow:0 1px 2px #0002}
+.t.f{--face:#DDF1EE;--edge:#1F5C59;--bd:#2F7D7A;--txt:#14403E}
+.ch{--edge:#C9B5CF;--bd:#7B2D8B66}.ch i{font-size:20px;padding:7px 10px}.ch.f{--face:#F3E9F5;--edge:#4E1A59;--bd:#7B2D8B;--txt:#7B2D8B}
+.ch.ok{--face:#E8F5EE;--edge:#2E7A50;--bd:#3E9B6A;--txt:#2E7A50}.ch.ng{--face:#FBEAE7;--edge:#B2412F;--bd:#E2553FB0;--txt:#B2412F}
+@keyframes pop{from{transform:perspective(500px) rotateX(70deg) scale(.85);opacity:0}to{transform:none;opacity:1}}
+.t:nth-child(2){animation-delay:.06s}.t:nth-child(3){animation-delay:.12s}.t:nth-child(4){animation-delay:.18s}.t:nth-child(5){animation-delay:.24s}.t:nth-child(6){animation-delay:.3s}.t:nth-child(7){animation-delay:.36s}.t:nth-child(8){animation-delay:.42s}
+.hint{font-size:11px;color:var(--soft)}.lab{font-size:11px;color:var(--soft);font-weight:700}
+.replay{align-self:center;font-size:12px;color:var(--sb);border:1px solid var(--sb);border-radius:14px;padding:5px 14px;background:#fff;cursor:pointer}
+</style></head><body>
+
+<div class="col"><div class="cap">① 낱말 조립 · 청록 3D 블록 (조각을 눌러 보세요)</div><div class="ph">
+<div class="ab"><b>〜てもいい / 〜てはいけない</b><span>1단계 · 단어별 조립</span></div><div class="bd">
+<div class="chips"><span class="c w on">낱말 조립</span><span class="c h">글자별 선택</span></div>
+<div class="card"><div class="ko">여기서 사진을 찍어도 됩니까?</div>
+<div class="ans" id="a1"><span class="t f"><i>ここで</i></span><span class="t f"><i>写真を</i></span></div></div>
+<div class="lab">남은 조각</div>
+<div class="tiles" id="p1"><span class="t"><i>いいですか。</i></span><span class="t"><i>撮っては</i></span><span class="t pressed"><i>撮っても</i></span></div>
+<div class="hint">낱말 하나는 함정이에요. 필요 없는 낱말은 남겨 두세요.</div>
+<span class="replay" onclick="replay()">↻ 튀어나오는 움직임 다시 보기</span>
+</div></div></div>
+
+<div class="col"><div class="cap">② 글자별 선택 · 보라 3D 블록, 채점 후 맞는 자리 초록·틀린 자리 빨강</div><div class="ph">
+<div class="ab"><b>〜てもいい / 〜てはいけない</b><span>1단계 · 단어별 조립</span></div><div class="bd">
+<div class="chips"><span class="c w">낱말 조립</span><span class="c h on">글자별 선택</span></div>
+<div class="card"><div class="ko">이 펜을 써도 돼요?</div>
+<div class="ans" style="background:#7B2D8B10"><span class="t ch ok"><i>こ</i></span><span class="t ch ok"><i>の</i></span><span class="t ch ok"><i>ペ</i></span><span class="t ch ok"><i>ン</i></span><span class="t ch ok"><i>を</i></span><span class="t ch ng"><i>っ</i></span><span class="t ch ng"><i>使</i></span><span class="t ch ok"><i>て</i></span></div></div>
+<div class="lab">남은 글자</div>
+<div class="tiles"><span class="t ch"><i>も</i></span><span class="t ch"><i>い</i></span><span class="t ch"><i>す</i></span><span class="t ch"><i>い</i></span><span class="t ch"><i>で</i></span><span class="t ch"><i>か</i></span><span class="t ch"><i>。</i></span></div>
+<div class="hint">초록 = 맞는 자리, 빨강 = 틀린 자리 (使 와 っ 순서가 바뀌었어요)</div>
+</div></div></div>
+<script>
+document.querySelectorAll('#p1 .t').forEach(t=>t.addEventListener('click',()=>{t.classList.add('f');document.getElementById('a1').appendChild(t);t.style.animation='none';void t.offsetWidth;t.style.animation='';}));
+function replay(){document.querySelectorAll('.t').forEach(t=>{t.style.animation='none';void t.offsetWidth;t.style.animation='';});}
+</script>
+</body></html>

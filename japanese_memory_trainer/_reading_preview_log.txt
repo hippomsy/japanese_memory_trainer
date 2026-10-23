@@ -1,0 +1,3 @@
+00:00 +0: loading G:/AntigravityTest/FLUTTER/japanese_memory_trainer/preview/preview_test.dart
+00:00 +0: capture haru reading
+00:05 +1: All tests passed!

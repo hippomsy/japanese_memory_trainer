@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>하나시 니홍고 메뉴 미리보기</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL@24,500,1&family=Noto+Sans+KR:wght@400;700;900&family=Zen+Old+Mincho:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F7F3EC;--card:#fff;--ink:#1C2340;--soft:#6A7088;--line:#EAE3D6;--shu:#E2553F;--hana:#3A4FA0}
+*{box-sizing:border-box;margin:0}
+body{background:#d9d4cb;font-family:'Noto Sans KR',sans-serif;color:var(--ink);display:flex;flex-wrap:wrap;justify-content:center;gap:28px;padding:24px 12px}
+.col{display:flex;flex-direction:column;align-items:center;gap:10px}
+.cap{font-size:13px;font-weight:700;color:#4a4740}
+.phone{width:390px;max-width:100%;background:var(--paper);border-radius:34px;overflow:hidden;box-shadow:0 20px 50px #0003;border:8px solid #222;display:flex;flex-direction:column}
+.bar{padding:18px 18px 8px}.bar h1{font-size:22px;font-weight:900}.bar p{font-size:13px;color:var(--soft)}
+.body{padding:6px 18px 20px;height:640px;overflow-y:auto}
+.sec{display:flex;justify-content:space-between;align-items:baseline;margin:14px 0 10px}
+.sec b{font-size:17px;font-weight:900}.sec span{font-size:12px;color:var(--soft)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:14px;position:relative}
+.top{display:flex;justify-content:space-between;align-items:flex-start}
+.ic{width:42px;height:42px;border-radius:14px;display:grid;place-items:center}
+.ic span,.ms{font-family:'Material Symbols Rounded';font-size:24px;font-style:normal}
+.badge{color:#fff;font-size:10px;font-weight:900;padding:2px 7px;border-radius:10px}
+.ill{height:84px;border-radius:14px;margin:12px 0 10px;opacity:.18}
+.t{font-size:15.5px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.s{font-size:12px;color:var(--soft);line-height:1.35;margin-top:3px}
+.hl{outline:3px solid #D9692B;outline-offset:3px;animation:p 1.4s ease-in-out infinite}
+@keyframes p{50%{outline-color:#D9692B55}}
+.arrow{position:absolute;top:-30px;left:8px;background:#D9692B;color:#fff;font-size:12px;font-weight:900;padding:3px 9px;border-radius:9px;white-space:nowrap}
+.nav{display:flex;justify-content:space-around;background:#fff;border-top:1px solid var(--line);height:68px;align-items:center;font-size:12px}
+.nav div{display:flex;flex-direction:column;align-items:center;gap:2px;color:var(--soft)}
+.nav .on{color:var(--shu);font-weight:700}.nav .on i{background:#E2553F22;border-radius:16px;padding:2px 18px}
+.nav i{font-family:'Material Symbols Rounded';font-style:normal;font-size:24px}
+/* hanashi home */
+.ab{display:flex;align-items:center;gap:10px;padding:16px 16px 6px}.ab .ms{font-size:22px}
+.ab h2{font-size:18px;font-weight:900}
+.hero{margin:8px 16px 4px;background:var(--hana);color:#fff;border-radius:22px;padding:18px}
+.hero .jp{font-family:'Zen Old Mincho',serif;font-size:30px;line-height:1.1}
+.hero p{font-size:12.5px;opacity:.85;margin-top:6px}
+.hero .row{display:flex;gap:8px;margin-top:12px}
+.pill{background:#ffffff22;border-radius:12px;padding:6px 10px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:4px}
+.pill .ms{font-size:16px}
+.tabs{display:flex;gap:6px;margin:14px 16px 6px}
+.tabs span{font-size:12.5px;padding:5px 12px;border-radius:14px;background:#fff;border:1px solid var(--line);color:var(--soft)}
+.tabs .on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.eps{padding:4px 16px 16px;height:430px;overflow-y:auto;display:flex;flex-direction:column;gap:8px}
+.ep{background:#fff;border:1px solid var(--line);border-radius:16px;padding:11px 12px;display:grid;grid-template-columns:38px 1fr auto;gap:10px;align-items:center}
+.no{width:38px;height:38px;border-radius:12px;background:#3A4FA01a;color:var(--hana);display:grid;place-items:center;font-weight:900;font-size:14px}
+.ep.done .no{background:#4F8F5B;color:#fff}
+.et{font-size:15px;font-weight:700;font-family:'Zen Old Mincho',serif}
+.em{font-size:11.5px;color:var(--soft);margin-top:2px;display:flex;align-items:center;gap:6px}
+.pb{width:56px;height:4px;background:var(--line);border-radius:2px;overflow:hidden}.pb i{display:block;height:100%;background:#4F8F5B}
+.ep .ms{color:var(--soft);font-size:22px}
+</style></head><body>
+<div class="col"><div class="cap">① 학습 탭 · 영상 카테고리에 새 메뉴</div>
+<div class="phone">
+ <div class="bar"><h1>학습</h1><p>오늘은 무엇을 공부할까요?</p></div>
+ <div class="body" id="b"></div>
+ <div class="nav"><div><i>wb_sunny</i>오늘</div><div class="on"><i>grid_view</i>학습</div><div><i>insights</i>기록</div></div>
+</div></div>
+
+<div class="col"><div class="cap">② 메뉴를 누르면 · 화 목록</div>
+<div class="phone">
+ <div class="ab"><span class="ms">arrow_back</span><h2>하나시 니홍고</h2></div>
+ <div class="hero"><div class="jp">話 日本語</div><p>일본어로 듣는 따뜻한 이야기 · Season 1 · 13화</p>
+  <div class="row"><span class="pill"><span class="ms">play_circle</span>이어서 보기 · 03화</span><span class="pill"><span class="ms">style</span>단어 24개 복습</span></div></div>
+ <div class="tabs"><span class="on">에피소드</span><span>단어장</span><span>복습</span></div>
+ <div class="eps" id="eps"></div>
+ <div class="nav"><div><i>wb_sunny</i>오늘</div><div class="on"><i>grid_view</i>학습</div><div><i>insights</i>기록</div></div>
+</div></div>
+<script>
+const C=[
+['단어','JLPT 단어','급수 → 품사 → 챕터 학습','style','#E2553F'],
+['단어','N4 단어장 30일','원어민 음성 · 자동 학습 · 사지선다','record_voice_over','#4F8F5B','NEW'],
+['한자','기본 부수 97','쪼개서 외우는 한자의 부품 · 12과','extension','#A34A32','NEW'],
+['단어','오늘의 복습','기억이 흐려질 때 다시 보기','replay','#E9A23B'],
+['문법','일본어 고급 문법','표현 · 활용 · 예문 · 퀴즈 30강','account_tree','#3D5A98','NEW'],
+['회화','백퍼 일본어 회화','원어민 음성 · 회화체 표현 456','record_voice_over','#D9692B','NEW'],
+['듣기','N4 청해','듣고 답하고 따라 읽기','headphones','#4A7BE0'],
+['듣기','테마별 기초 청취','원어민 대화 25강','graphic_eq','#8B6CD9'],
+['듣기','N5 청해','실전 2회 + 모의고사 2회 · 96문제','quiz','#CF7A93','NEW'],
+['시험','N4 모의고사','문자·어휘 · 문법 · 독해 2회분','assignment','#6B5BAF','NEW'],
+['읽기','하루의 일기','매일 한 편 · 365편','auto_stories','#E56B8F'],
+['읽기','문화 독해','원어민 낭독 40강','menu_book','#3FA88B'],
+['영상','스크린 일본어','영화 3편 · 115강','movie_filter','#2B2D42','NEW'],
+['영상','하나시 니홍고','일본어 이야기 13화 · 대본 · 섀도잉','play_circle','#3A4FA0','NEW']];
+const g={};C.forEach(c=>(g[c[0]]??=[]).push(c));
+let h='';for(const[k,v]of Object.entries(g)){
+h+=`<div class="sec"><b>${k}</b><span>${v.length}개</span></div><div class="grid">`;
+for(const[,t,s,ic,col,bd]of v){const hl=t==='하나시 니홍고';
+h+=`<div class="tile${hl?' hl':''}" ${hl?'id="hp"':''}>${hl?'<div class="arrow">여기!</div>':''}<div class="top"><div class="ic" style="background:${col}1f;color:${col}"><span>${ic}</span></div>${bd?`<span class="badge" style="background:${col}">${bd}</span>`:''}</div><div class="ill" style="background:${col}"></div><div class="t">${t}</div><div class="s">${s}</div></div>`}
+h+='</div>'}
+b.innerHTML=h;
+setTimeout(()=>{const e=document.getElementById('hp');b.scrollTop=e.offsetTop-b.offsetTop-150},300);
+const E=[["まずい、急がないと",11,100],["これくらい、大丈夫だろう",13,100],["まあ、こんなものまで",15,40],["このままで、いいのかな",16,0],["声をかけてみよう",16,0],["今日みたいな日も",19,0],["私が 悪かった",22,0],["長く生きたね",19,0],["いつものやつで",20,0],["もうやめようか",24,0],["きっとうまくいく",23,0],["まあ、これが楽だ",22,0],["ここに いたい",22,0]];
+eps.innerHTML=E.map(([t,m,p],i)=>`<div class="ep${p===100?' done':''}"><div class="no">${p===100?'<span class="ms" style="color:#fff;font-size:20px">check</span>':String(i+1).padStart(2,'0')}</div><div><div class="et">${t}</div><div class="em">${m}분${p?` · <span class="pb"><i style="width:${p}%"></i></span> ${p}%`:' · 시작 전'}</div></div><span class="ms">chevron_right</span></div>`).join('');
+</script></body></html>

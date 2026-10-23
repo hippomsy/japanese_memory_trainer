@@ -1,0 +1,178 @@
+00:00 +0: loading G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart
+00:00 +0: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:00 +1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:01 +2: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:02 +3: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:03 +4: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:04 +5: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:04 +6: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:04 +7: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/app_flow_test.dart: grade → category → chapter → study updates progress
+00:04 +8: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/bunka_reading_test.dart: sentence buttons play their clip; toggles; quiz saves score
+00:04 +9: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/bunka_reading_test.dart: sentence buttons play their clip; toggles; quiz saves score
+00:04 +10: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/bunka_reading_test.dart: sentence buttons play their clip; toggles; quiz saves score
+00:04 +11: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/bunka_reading_test.dart: sentence buttons play their clip; toggles; quiz saves score
+00:04 +12: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/bunka_reading_test.dart: sentence buttons play their clip; toggles; quiz saves score
+00:04 +13: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/bunka_reading_test.dart: sentence buttons play their clip; toggles; quiz saves score
+00:04 +14: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/bunka_reading_test.dart: sentence buttons play their clip; toggles; quiz saves score
+00:05 +15: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/data/sentence_bank_test.dart: every chapter has 5 sentence items built from its own words
+00:05 +16: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/bunka_reading_test.dart: list shows both parts and opens a lesson
+00:05 +17: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/bunka_reading_test.dart: list shows both parts and opens a lesson
+00:05 +18: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/bunka_reading_test.dart: list shows both parts and opens a lesson
+00:05 +19: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/bunka_reading_test.dart: list shows both parts and opens a lesson
+00:05 +20: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/bunka_reading_test.dart: list shows both parts and opens a lesson
+00:05 +21: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/bunka_reading_test.dart: list shows both parts and opens a lesson
+00:06 +22: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/grammar_course_test.dart: bundled grammar lessons parse with answers
+00:06 +23: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/grammar_course_test.dart: choice and order questions check answers and speak
+00:07 +24: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/grammar_course_test.dart: choice and order questions check answers and speak
+00:08 +25: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/grammar_course_test.dart: choice and order questions check answers and speak
+00:08 +26: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/grammar_course_test.dart: choice and order questions check answers and speak
+00:08 +27: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/grammar_course_test.dart: choice and order questions check answers and speak
+00:08 +28: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/grammar_course_test.dart: choice and order questions check answers and speak
+00:08 +29: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/grammar_course_test.dart: choice and order questions check answers and speak
+00:08 +30: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/grammar_course_test.dart: choice and order questions check answers and speak
+00:09 +31: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/jlpt_listening_test.dart: answer is graded and saved; script lines replay their clip
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following StateError was thrown running a test:
+Bad state: No element
+
+When the exception was thrown, this was the stack:
+#0      Iterable.first (dart:core/iterable.dart:663:7)
+#1      _FirstFinderMixin.filter (package:flutter_test/src/finders.dart:1332:28)
+#3      Iterable.single (dart:core/iterable.dart:694:13)
+#4      WidgetController.element (package:flutter_test/src/controller.dart:868:30)
+#5      WidgetController.ensureVisible (package:flutter_test/src/controller.dart:2305:32)
+#6      main.<anonymous closure> (file:///G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/jlpt_listening_test.dart:130:18)
+<asynchronous suspension>
+#7      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#8      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided 2 frames from dart:async-patch and package:stack_trace)
+
+The test description was:
+  answer is graded and saved; script lines replay their clip
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:11 +31 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/boss_page_test.dart: BossPage loads boss words and reports conquered and needs-practice counts
+00:11 +31 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/jlpt_listening_test.dart: answer is graded and saved; script lines replay their clip [E]
+  Test failed. See exception logs above.
+  The test description was: answer is graded and saved; script lines replay their clip
+  
+00:12 +32 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/chapter_page_test.dart: list tab toggles favorite and shows details on tap
+00:12 +33 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/chapter_page_test.dart: list tab toggles favorite and shows details on tap
+00:13 +34 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/daily_recall_page_test.dart: answer stays hidden until revealed and forgotten word is saved
+00:14 +35 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/danger_words_page_test.dart: DangerWordsPage shows descending danger order with score and wrong count
+00:14 +36 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/danger_words_page_test.dart: DangerWordsPage shows descending danger order with score and wrong count
+00:14 +37 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/danger_words_page_test.dart: DangerWordsPage shows descending danger order with score and wrong count
+00:14 +38 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/elementary_navigation_test.dart: all elementary grades open chapters directly
+00:14 +39 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/elementary_navigation_test.dart: all elementary grades open chapters directly
+00:15 +40 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/elementary_navigation_test.dart: all elementary grades open chapters directly
+00:15 +41 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/elementary_navigation_test.dart: all elementary grades open chapters directly
+00:16 +42 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/elementary_navigation_test.dart: all elementary grades open chapters directly
+00:16 +43 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/elementary_navigation_test.dart: all elementary grades open chapters directly
+00:17 +44 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/elementary_navigation_test.dart: all elementary grades open chapters directly
+00:17 +45 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/elementary_navigation_test.dart: all elementary grades open chapters directly
+00:17 +46 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/elementary_navigation_test.dart: all elementary grades open chapters directly
+00:17 +47 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/elementary_navigation_test.dart: all elementary grades open chapters directly
+00:17 +48 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:18 +49 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/level_select_page_test.dart: LevelSelectPage saves the tapped level and closes
+00:19 +50 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/listening_page_test.dart: translation is available before answering without unlocking answers
+00:19 +51 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/listening_page_test.dart: listen first, reveal transcript after answer, save miss
+00:20 +52 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/news_pages_test.dart: list opens article; toggles hide translation and ruby; speak paragraph
+00:20 +53 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/news_pages_test.dart: list opens article; toggles hide translation and ruby; speak paragraph
+00:20 +54 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/news_pages_test.dart: list opens article; toggles hide translation and ruby; speak paragraph
+00:22 +55 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/news_pages_test.dart: list opens article; toggles hide translation and ruby; speak paragraph
+00:22 +56 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/review_page_test.dart: review uses four choice buttons and no text field
+00:23 +57 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/statistics_page_test.dart: StatisticsPage shows long-term weekly retention danger and JLPT progress
+00:24 +58 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/statistics_page_test.dart: StatisticsPage shows long-term weekly retention danger and JLPT progress
+00:24 +59 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/statistics_page_test.dart: StatisticsPage shows long-term weekly retention danger and JLPT progress
+00:24 +60 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/word_pronunciation_test.dart: 空く speaker uses PDF reading あく instead of ambiguous kanji
+00:24 +61 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/pages/word_pronunciation_test.dart: 空く speaker uses PDF reading あく instead of ambiguous kanji
+00:25 +62 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/screen_japanese_test.dart: speaker button reads a line and answer button reveals Japanese
+00:25 +63 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/screen_japanese_test.dart: speaker button reads a line and answer button reveals Japanese
+00:26 +64 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/screen_japanese_test.dart: speaker button reads a line and answer button reveals Japanese
+00:26 +65 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/screen_japanese_test.dart: speaker button reads a line and answer button reveals Japanese
+00:26 +66 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/screen_japanese_test.dart: speaker button reads a line and answer button reveals Japanese
+00:26 +67 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/screen_japanese_test.dart: speaker button reads a line and answer button reveals Japanese
+00:26 +68 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/screen_japanese_test.dart: speaker button reads a line and answer button reveals Japanese
+00:26 +69 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/screen_japanese_test.dart: speaker button reads a line and answer button reveals Japanese
+00:26 +70 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/screen_japanese_test.dart: speaker button reads a line and answer button reveals Japanese
+00:26 +71 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/screen_japanese_test.dart: speaker button reads a line and answer button reveals Japanese
+00:26 +72 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/screen_japanese_test.dart: speaker button reads a line and answer button reveals Japanese
+00:26 +73 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/screen_japanese_test.dart: speaker button reads a line and answer button reveals Japanese
+00:26 +74 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/screen_japanese_test.dart: speaker button reads a line and answer button reveals Japanese
+00:26 +75 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/screen_japanese_test.dart: speaker button reads a line and answer button reveals Japanese
+00:26 +76 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/screen_japanese_test.dart: speaker button reads a line and answer button reveals Japanese
+00:26 +77 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/screen_japanese_test.dart: speaker button reads a line and answer button reveals Japanese
+00:27 +78 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/screen_japanese_test.dart: speaker button reads a line and answer button reveals Japanese
+00:27 +79 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/screen_japanese_test.dart: speaker button reads a line and answer button reveals Japanese
+00:27 +80 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/screen_japanese_test.dart: speaker button reads a line and answer button reveals Japanese
+00:27 +81 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/screen_japanese_test.dart: speaker button reads a line and answer button reveals Japanese
+00:27 +82 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/listening_store_test.dart: misses persist and become due next day, a correct retry clears them
+00:27 +83 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/listening_store_test.dart: every exercise has unique choices, bilingual lines and a valid answer
+00:28 +84 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: first correct instant recall on a brand-new word sets a positive stability and long stage bucket
+00:28 +85 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: wrong answer never grows stability and raises dangerScore
+00:28 +86 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: correct answer taking more than 5000ms raises danger relative to fast answer
+00:28 +87 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: koreanToJapanese correct recall improves recallScore more than japaneseToKorean improves it
+00:28 +88 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: recognition success plus repeated recall failure raises dangerScore
+00:28 +89 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: reviewing well before nextReviewAt still recomputes it but never shortens stability
+00:28 +90 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: stage stays within 0..7 and difficulty within 1..10 across many reviews
+00:28 +91 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/memory_evaluator_test.dart: reaching stage 6 or above records longTermReachedAt only once
+00:29 +92 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/news_service_test.dart: bundled feed parses with ruby, levels, translation and key words
+00:29 +93 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/news_service_test.dart: refresh caches remote feed and falls back when offline
+00:29 +94 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/news_service_test.dart: google sheet CSV feed is parsed and enriched with app word levels
+00:29 +95 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/news_service_test.dart: today's article appears only from 7 AM
+00:30 +96 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/quiz_generator_test.dart: Japanese to Korean question always contains the correct answer
+00:30 +97 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/quiz_generator_test.dart: Korean to Japanese question always contains the correct answer
+00:30 +98 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/quiz_generator_test.dart: sentence blank always contains the correct answer
+00:30 +99 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/quiz_generator_test.dart: listening question always contains the correct answer
+00:30 +100 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/quiz_generator_test.dart: all sentence blank questions replace the target inside the sentence
+00:30 +101 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/quiz_generator_test.dart: all seed words in all four quiz types have exactly one correct choice
+00:31 +102 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: interval in days equals stability in days at the default 90% retention target
+00:31 +103 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: initial stability by rating follows Again < Hard < Good < Easy
+00:31 +104 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: nextReviewAt adds the stability-derived interval to the given time
+00:31 +105 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: retrievability decreases as more days pass since the last review
+00:31 +106 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: failing a review (Again) always yields a lower stability than a mid-range value
+00:31 +107 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: recalling successfully never decreases stability
+00:31 +108 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: difficulty stays clamped between 1 and 10 across repeated Again ratings
+00:31 +109 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: stageForIntervalDays buckets match the previous fixed-schedule cutoffs
+00:31 +110 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/review_scheduler_test.dart: isDue returns true when no next review exists or review time passed
+00:31 +111 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/romaji_test.dart: common words convert correctly
+00:31 +112 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/romaji_test.dart: kana and kanji are left untouched
+00:31 +113 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/romaji_test.dart: unfinished input keeps trailing letters when not finalized
+00:32 +114 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/statistics_service_test.dart: statistics snapshot calculates long term danger retention and JLPT progress
+00:32 +115 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/statistics_service_test.dart: streak counts consecutive dates ending today or yesterday
+00:32 +116 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/statistics_service_test.dart: retention rate is zero when no reviews exist
+00:32 +117 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/study_quiz_test.dart: choices contain the answer and 3 other unique words
+00:32 +118 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/study_quiz_test.dart: tiles include every answer character and have 20 slots
+00:32 +119 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/services/study_quiz_test.dart: typed answers accept word, reading and katakana reading
+00:33 +120 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/theme_listening_test.dart: all imported lessons have meanings, kana and complete dialogues
+00:34 +121 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/theme_listening_test.dart: every lesson has its native recording bundled
+00:34 +122 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/theme_listening_test.dart: play-all uses the lesson recording, words and lines use TTS
+00:36 +123 -1: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/theme_listening_test.dart: play-all uses the lesson recording, words and lines use TTS
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following StateError was thrown running a test:
+Bad state: No element
+
+When the exception was thrown, this was the stack:
+#0      Iterable.single (dart:core/iterable.dart:694:25)
+#1      WidgetController.element (package:flutter_test/src/controller.dart:868:30)
+#2      WidgetController.ensureVisible (package:flutter_test/src/controller.dart:2305:32)
+#3      main.<anonymous closure> (file:///G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/theme_listening_test.dart:102:18)
+<asynchronous suspension>
+#4      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#5      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+The test description was:
+  play-all uses the lesson recording, words and lines use TTS
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:37 +123 -2: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/widget_test.dart: app starts on today and opens vocabulary tab
+00:37 +123 -2: G:/AntigravityTest/FLUTTER/japanese_memory_trainer/test/theme_listening_test.dart: play-all uses the lesson recording, words and lines use TTS [E]
+  Test failed. See exception logs above.
+  The test description was: play-all uses the lesson recording, words and lines use TTS
+  
+00:37 +124 -2: Some tests failed.

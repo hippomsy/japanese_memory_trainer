@@ -1,0 +1,11 @@
+# 2026-10-16 기본 제외 목록
+.venv/
+__pycache__/
+*.pyc
+build/
+dist/
+*.log
+.pytest_cache/
+.ruff_cache/
+bin/
+obj/

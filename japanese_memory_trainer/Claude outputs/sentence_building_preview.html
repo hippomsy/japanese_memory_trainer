@@ -1,0 +1,80 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>문장 만들기 미리보기</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F7F3EC;--card:#fff;--ink:#1C2340;--soft:#6A7088;--line:#EAE3D6;--sb:#2F7D7A;--sbs:#E2F1EF;--ok:#3E9B6A;--ng:#E2553F}
+*{box-sizing:border-box;margin:0}body{background:#d9d4cb;font-family:'Noto Sans KR',sans-serif;color:var(--ink);display:flex;flex-wrap:wrap;justify-content:center;gap:24px;padding:24px 12px}
+.col{display:flex;flex-direction:column;align-items:center;gap:8px}.cap{font-size:13px;font-weight:700;color:#4a4740}
+.ph{width:340px;max-width:100%;height:690px;background:var(--paper);border-radius:30px;border:8px solid #222;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 18px 40px #0003}
+.ab{padding:16px 16px 6px}.ab b{font-size:19px;font-weight:900;display:block}.ab span{font-size:12px;color:var(--soft)}
+.bd{padding:6px 16px 16px;overflow:hidden;display:flex;flex-direction:column;gap:9px}
+.hero{background:var(--sb);color:#fff;border-radius:20px;padding:16px}.hero h2{font-size:19px;line-height:1.3;font-weight:900}.hero p{font-size:11.5px;opacity:.8;margin-top:6px;line-height:1.5}
+.row{display:flex;gap:6px}.chip{padding:5px 14px;border-radius:16px;border:1px solid var(--line);background:#fff;font-size:12.5px}.chip.on{background:var(--sbs);border-color:var(--sb);font-weight:700}
+.btn{flex:1;text-align:center;padding:11px 6px;border-radius:12px;font-size:13px;font-weight:700}.btn.p{background:var(--sb);color:#fff}.btn.o{border:1px solid var(--line);background:#fff;color:var(--sb)}
+.sec{font-weight:900;font-size:15px;margin-top:4px}
+.ls{background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px 12px;display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center}
+.no{width:34px;height:34px;border-radius:11px;background:var(--sbs);color:var(--sb);display:grid;place-items:center;font-weight:900;font-size:13px}.no.d{background:var(--sb);color:#fff}
+.lt{font-family:'Noto Sans JP';font-weight:700;font-size:14px}.lm{font-size:11.5px;color:var(--soft)}.sc{font-size:11px;color:var(--soft);font-weight:700}
+.pg{display:flex;align-items:center;gap:8px;font-weight:800;font-size:13px}.bar{flex:1;height:7px;background:var(--sbs);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--sb)}
+.tags{display:flex;gap:6px;font-size:11.5px}.tags span{padding:3px 9px;border-radius:9px;background:#fff;border:1px solid var(--line)}.tags span:first-child{background:var(--sbs)}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px}.ko{font-weight:700;font-size:14.5px}
+.ja{font-family:'Noto Sans JP';font-size:19px;line-height:1.7;margin-top:6px}.blank{color:var(--sb);font-weight:900}
+.op{border:1px solid var(--line);background:#fff;border-radius:12px;padding:10px;text-align:center;font-family:'Noto Sans JP';font-size:17px}
+.op.ok{background:#3E9B6A22;border-color:var(--ok)}.op.ng{background:#E2553F1c;border-color:var(--ng)}
+.ans{background:var(--sbs);border-radius:12px;min-height:56px;padding:8px;display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.t{font-family:'Noto Sans JP';font-size:16px;font-weight:500;padding:7px 11px;border-radius:10px;background:#fff;border:1px solid var(--line)}.ans .t{border:1.5px solid var(--sb)}
+.tiles{display:flex;flex-wrap:wrap;gap:7px}.hint{font-size:11px;color:var(--soft)}
+.fb{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px;font-size:12.5px}.fb .h{color:var(--ng);font-weight:800;font-size:13px}.fb .j{font-family:'Noto Sans JP';font-size:16px;font-weight:700;margin-top:4px}.fb .r{color:var(--soft);font-size:11.5px}
+.fb .p{color:var(--sb);font-weight:800;margin-top:8px;font-size:12px}.nx{display:flex;justify-content:space-between;align-items:center;margin-top:8px}.nx a{color:var(--sb);font-size:12px}.nx b{background:var(--sb);color:#fff;padding:7px 16px;border-radius:10px;font-size:12.5px}
+.chk{align-self:flex-end;background:var(--sb);color:#fff;padding:8px 18px;border-radius:10px;font-size:13px;font-weight:700}
+.sp{display:flex;align-items:center;justify-content:space-between}.spk{width:38px;height:38px;border-radius:50%;background:var(--sb);color:#fff;display:grid;place-items:center;font-size:16px}
+</style></head><body>
+
+<div class="col"><div class="cap">① 첫 화면 · 레벨 선택, 랜덤, 틀린 문장 복습</div><div class="ph">
+<div class="ab"><b>문장 만들기</b><span>N4 · N3 · 자판 없이 터치로</span></div><div class="bd">
+<div class="hero"><h2>조각을 맞춰<br>일본어 문장을 만들어요</h2><p>문법 24개 · 문장 96개<br>한 강의: 빈칸 고르기 → 조각 배열 → 듣고 배열</p></div>
+<div class="row"><span class="chip on">N4</span><span class="chip">N3</span></div>
+<div class="row"><span class="btn p">⇄ N4 랜덤 10문제</span><span class="btn o">↺ 틀린 문장 3</span></div>
+<div class="sec">N4 문법 <span style="font-size:12px;color:#6A7088;font-weight:400">12강</span></div>
+<div class="ls"><div class="no d">✓</div><div><div class="lt">〜てもいい / 〜てはいけない</div><div class="lm">~해도 된다 / ~하면 안 된다</div></div><div class="sc">최고 12/12</div></div>
+<div class="ls"><div class="no">2</div><div><div class="lt">〜なければならない</div><div class="lm">~해야 한다 / ~하지 않아도 된다</div></div><div class="sc">최고 9/12</div></div>
+<div class="ls"><div class="no">3</div><div><div class="lt">〜たほうがいい</div><div class="lm">~하는 게 좋다</div></div><div class="sc">시작 전</div></div>
+<div class="ls"><div class="no">4</div><div><div class="lt">〜つもりだ</div><div class="lm">~할 생각이다(계획)</div></div><div class="sc">시작 전</div></div>
+<div class="ls"><div class="no">5</div><div><div class="lt">〜(よ)うと思う</div><div class="lm">~하려고 한다(의지)</div></div><div class="sc">시작 전</div></div>
+</div></div></div>
+
+<div class="col"><div class="cap">② 1단계 빈칸 고르기 (문제 1~4)</div><div class="ph">
+<div class="ab"><b>〜てもいい / 〜てはいけない</b><span>문장 만들기</span></div><div class="bd">
+<div class="pg">2 / 12<div class="bar"><i style="width:17%"></i></div></div>
+<div class="tags"><span>빈칸 고르기</span><span>N4 · 〜てもいい / 〜てはいけない</span></div>
+<div class="card"><div class="ko">교실에서 음식을 먹으면 안 됩니다.</div><div class="ja">教室で食べ物を<span class="blank"> 食べては </span>いけません。</div></div>
+<div class="hint">빈칸에 들어갈 말을 고르세요</div>
+<div class="op">食べたら</div><div class="op ok">食べては</div><div class="op">食べれば</div><div class="op">食べても</div>
+<div class="fb" style="border-color:#3E9B6A55"><div class="h" style="color:#3E9B6A">✓ 정답이에요!</div><div class="j">教室で食べ物を食べてはいけません。 🔊</div><div class="r">きょうしつで たべものを たべては いけません。</div>
+<div class="p">〜てもいい / 〜てはいけない</div>て형 + もいい는 허가, て형 + はいけない는 금지예요.</div>
+</div></div></div>
+
+<div class="col"><div class="cap">③ 2단계 조각 배열 (틀렸을 때 모습)</div><div class="ph">
+<div class="ab"><b>〜てもいい / 〜てはいけない</b><span>문장 만들기</span></div><div class="bd">
+<div class="pg">6 / 12<div class="bar"><i style="width:50%"></i></div></div>
+<div class="tags"><span>조각 배열</span><span>N4 · 〜てもいい</span></div>
+<div class="card"><div class="ko">여기서 사진을 찍어도 됩니까?</div>
+<div class="ans" style="background:#E2553F14"><span class="t">ここで</span><span class="t">写真を</span><span class="t">撮っては</span><span class="t">いいですか。</span></div></div>
+<div class="tiles"><span class="t">撮っても</span></div>
+<div class="hint">조각 하나는 함정이에요. 필요 없는 조각은 남겨 두세요.</div>
+<div class="fb"><div class="h">✕ 아쉬워요. 정답을 확인하세요</div><div class="j">ここで写真を撮ってもいいですか。 🔊</div><div class="r">ここで しゃしんを とっても いいですか。</div><div>여기서 사진을 찍어도 됩니까?</div>
+<div class="p">〜てもいい / 〜てはいけない</div>묻을 때는 「〜てもいいですか」.
+<div class="nx"><a>다른 순서지만 맞아요</a><b>다음</b></div></div>
+</div></div></div>
+
+<div class="col"><div class="cap">④ 3단계 듣고 배열 (한국어 없이 소리만)</div><div class="ph">
+<div class="ab"><b>〜てもいい / 〜てはいけない</b><span>문장 만들기</span></div><div class="bd">
+<div class="pg">10 / 12<div class="bar"><i style="width:83%"></i></div></div>
+<div class="tags"><span>듣고 배열</span><span>N4 · 〜てもいい</span></div>
+<div class="card"><div class="sp"><div class="ko">잘 듣고 들린 순서대로 조각을 놓으세요</div><div class="spk">🔊</div></div>
+<div class="ans"><span class="t">夜遅く</span></div></div>
+<div class="tiles"><span class="t">いけません。</span><span class="t">電話しても</span><span class="t">電話しては</span></div>
+<div class="hint">조각 하나는 함정이에요. 필요 없는 조각은 남겨 두세요.</div>
+<div class="row" style="justify-content:space-between;align-items:center"><span style="color:#2F7D7A;font-size:13px">다시 놓기</span><span class="chk" style="opacity:.45">확인</span></div>
+</div></div></div>
+</body></html>

@@ -1,0 +1,91 @@
+import 'package:flutter/material.dart';
+import 'package:kioku_japanese/data/n4_word_icons.dart';
+
+/// 2026-10-21 단어 그림 카드(고래 암기장처럼 단어 옆·카드 위에 그림을 보여 준다).
+/// 단어 id 로 고른 아이콘을 파스텔 배경 위에 그린다. 그림이 없는 단어는 [fallback] 아이콘.
+class WordPicture extends StatelessWidget {
+  const WordPicture(
+      {super.key,
+      required this.wordId,
+      this.size = 48,
+      this.fallback = Icons.translate_rounded});
+
+  final String wordId;
+  final double size;
+  final IconData fallback;
+
+  /// 2026-10-21 배경(옅은 색)·그림(진한 색) 짝. 단어 id 로 골라 같은 단어는 늘 같은 색.
+  static const List<(Color, Color)> _palette = [
+    (Color(0xFFFFE8E0), Color(0xFFE2553F)), // 주홍
+    (Color(0xFFE3F1FF), Color(0xFF3B6FD6)), // 하늘
+    (Color(0xFFE5F6EC), Color(0xFF2F8A5B)), // 말차
+    (Color(0xFFFFF2D6), Color(0xFFD08A12)), // 황매화
+    (Color(0xFFF0E9FF), Color(0xFF7A57D1)), // 등나무
+    (Color(0xFFFFE6EF), Color(0xFFD94E7A)), // 벚꽃
+    (Color(0xFFE0F5F2), Color(0xFF23907A)), // 어린 대나무
+    (Color(0xFFEDEFF7), Color(0xFF3D4870)), // 먹
+  ];
+
+  static IconData? iconFor(String wordId) => n4WordIcons[wordId];
+
+  static (Color, Color) colorsFor(String wordId) {
+    var h = 0;
+    for (final c in wordId.codeUnits) {
+      h = (h * 31 + c) & 0x7fffffff;
+    }
+    return _palette[h % _palette.length];
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final (bg, fg) = colorsFor(wordId);
+    final icon = iconFor(wordId) ?? fallback;
+    final r = size * 0.28;
+    return Container(
+      key: ValueKey('word-picture-$wordId'),
+      width: size,
+      height: size,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(r),
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Color.lerp(bg, Colors.white, 0.45)!, bg],
+        ),
+        border: Border.all(color: fg.withValues(alpha: 0.18), width: size > 80 ? 2 : 1),
+        boxShadow: size > 80
+            ? [
+                BoxShadow(
+                    color: fg.withValues(alpha: 0.16),
+                    blurRadius: 14,
+                    offset: const Offset(0, 6))
+              ]
+            : null,
+      ),
+      child: Stack(alignment: Alignment.center, children: [
+        // 2026-10-21 그림 뒤 동그라미 장식(밋밋하지 않게).
+        Positioned(
+          right: size * 0.08,
+          top: size * 0.08,
+          child: Container(
+            width: size * 0.22,
+            height: size * 0.22,
+            decoration: BoxDecoration(
+                shape: BoxShape.circle, color: fg.withValues(alpha: 0.10)),
+          ),
+        ),
+        Positioned(
+          left: size * 0.10,
+          bottom: size * 0.10,
+          child: Container(
+            width: size * 0.14,
+            height: size * 0.14,
+            decoration: BoxDecoration(
+                shape: BoxShape.circle, color: fg.withValues(alpha: 0.08)),
+          ),
+        ),
+        Icon(icon, size: size * 0.56, color: fg),
+      ]),
+    );
+  }
+}
