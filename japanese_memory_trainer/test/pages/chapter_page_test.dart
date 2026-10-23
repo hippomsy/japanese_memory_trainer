@@ -231,4 +231,67 @@ void main() {
     expect(find.text('2 / 4'), findsOneWidget);
     expect(find.text('今'), findsOneWidget);
   });
+
+  // 2026-10-24 저장된 오답 기록이 있는 단어만 골라 다시 학습하는 필터를 검증한다.
+  testWidgets('wrong-only filter studies only saved wrong words', (tester) async {
+    spoken.clear();
+    SharedPreferences.setMockInitialValues({});
+    final store = StudyStore(await SharedPreferences.getInstance());
+    await store.recordRecall('c2', RecallRating.forgotten);
+    final catalog = WordCatalog(chapterWords);
+    await tester.pumpWidget(
+      MaterialApp(
+        home: ChapterPage(
+          chapter: catalog.chaptersOf('N5', '부사').first,
+          catalog: catalog,
+          store: store,
+          speakJapanese: (text) async => spoken.add('ja:$text'),
+          random: Random(3),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const ValueKey('tab-1')));
+    await tester.pumpAndSettle();
+
+    expect(find.text('✗ 틀린 단어만 (1)'), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('wrong-only-filter')));
+    await tester.pumpAndSettle();
+    expect(find.text('1 / 1'), findsOneWidget);
+    expect(find.text('지금'), findsOneWidget);
+
+    // 2026-10-24 마지막 틀린 단어를 맞혀도 오답 기록에서 빠지기 전의 목록으로 결과를 끝까지 보여준다.
+    await tester.tap(find.byKey(const ValueKey('choice-今')));
+    await tester.pumpAndSettle();
+    expect(find.text('정답입니다!'), findsOneWidget);
+    expect(store.wrongIds, isEmpty);
+    await tester.tap(find.byKey(const ValueKey('next-question')));
+    await tester.pumpAndSettle();
+    expect(find.byKey(const ValueKey('finish-score')), findsOneWidget);
+  });
+
+  testWidgets('wrong-only filter shows a message when nothing was missed', (tester) async {
+    await pumpChapter(tester);
+    await tester.tap(find.byKey(const ValueKey('tab-1')));
+    await tester.pumpAndSettle();
+    expect(find.text('✗ 틀린 단어만 (0)'), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('wrong-only-filter')));
+    await tester.pumpAndSettle();
+    expect(find.textContaining('틀린 단어가 없습니다'), findsOneWidget);
+  });
+
+  // 2026-10-24 답한 뒤 모드를 바꿔도 같은 문제를 다시 풀어 점수가 중복 집계되지 않는다.
+  testWidgets('changing mode after answering keeps the answered state', (tester) async {
+    await pumpChapter(tester);
+    await tester.tap(find.byKey(const ValueKey('tab-1')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const ValueKey('choice-少し')));
+    await tester.pumpAndSettle();
+    expect(find.text('정답입니다!'), findsOneWidget);
+
+    await tester.tap(find.byKey(const ValueKey('mode-assemble')));
+    await tester.pumpAndSettle();
+    expect(find.text('정답입니다!'), findsOneWidget);
+    expect(find.byKey(const ValueKey('input-submit')), findsNothing);
+  });
 }

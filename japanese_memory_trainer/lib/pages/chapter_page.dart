@@ -61,21 +61,66 @@ class _ChapterPageState extends State<ChapterPage> {
 
   int _tab = 0; // 0: 목록, 1: 학습
   bool _importantOnly = false;
+  // 2026-10-24 앱을 껐다 켜도 남는 오답 기록(wrongIds)으로 이 챕터의 틀린 단어만 골라 학습한다.
+  bool _wrongOnly = false;
+  // 2026-10-24 필터를 켜는 순간의 틀린 단어를 고정해 둔다. 풀다가 맞히면 오답 기록에서 빠지므로 매번 새로 고르면 목록이 중간에 줄어든다.
+  List<Vocabulary> _wrongSnapshot = const <Vocabulary>[];
+
+  // 2026-10-24 중요 단어·틀린 단어 필터 중 하나라도 켜져 있으면 챕터 전체가 아닌 일부 단어만 학습한다.
+  bool get _filtered => _importantOnly || _wrongOnly;
 
   // 2026-10-19 중요 단어 선택 상태를 기존 즐겨찾기 저장소와 공유한다.
-  List<Vocabulary> get _studyWords => _importantOnly
-      ? widget.chapter.words.where((w) => widget.store.isFavorite(w.id)).toList()
-      : widget.chapter.words;
+  // 2026-10-24 틀린 단어 필터는 학습 기록 저장소의 오답 목록과 챕터 단어를 대조해 고른다.
+  List<Vocabulary> get _studyWords {
+    if (_wrongOnly) return _wrongSnapshot;
+    if (_importantOnly) {
+      return widget.chapter.words
+          .where((w) => widget.store.isFavorite(w.id))
+          .toList();
+    }
+    return widget.chapter.words;
+  }
+
+  // 2026-10-24 이 챕터 단어 중 오답 기록이 남아 있는 단어 수를 센다.
+  int _wrongCountInChapter() {
+    final wrongIds = widget.store.wrongIds;
+    return widget.chapter.words.where((w) => wrongIds.contains(w.id)).length;
+  }
+
+  // 2026-10-24 필터를 바꾸면 새 단어 목록으로 처음부터 다시 시작한다. setState 안에서 호출한다.
+  void _resetStudyFilter() {
+    _autoIndex = 0;
+    _showBack = false;
+    _autoDone = false;
+    _startRound(_studyWords);
+    if (_mode == StudyMode.sentence && _filtered) _mode = StudyMode.choice;
+  }
 
   void _changeImportantOnly(bool enabled) {
+    // 2026-10-24 _stopAuto가 내부에서 setState를 부르므로 setState 바깥에서 먼저 멈춘다.
     _stopAuto();
     setState(() {
       _importantOnly = enabled;
-      _autoIndex = 0;
-      _showBack = false;
-      _autoDone = false;
-      _startRound(_studyWords);
-      if (_mode == StudyMode.sentence && enabled) _mode = StudyMode.choice;
+      // 2026-10-24 두 필터는 동시에 쓰지 않으므로 한쪽을 켜면 다른 쪽은 끈다.
+      if (enabled) {
+        _wrongOnly = false;
+        _wrongSnapshot = const <Vocabulary>[];
+      }
+      _resetStudyFilter();
+    });
+  }
+
+  // 2026-10-24 틀린 단어만 다시 학습하는 필터를 켜고 끈다.
+  void _changeWrongOnly(bool enabled) {
+    _stopAuto();
+    final wrongIds = widget.store.wrongIds;
+    setState(() {
+      _wrongOnly = enabled;
+      if (enabled) _importantOnly = false;
+      _wrongSnapshot = enabled
+          ? widget.chapter.words.where((w) => wrongIds.contains(w.id)).toList()
+          : const <Vocabulary>[];
+      _resetStudyFilter();
     });
   }
 
@@ -122,7 +167,7 @@ class _ChapterPageState extends State<ChapterPage> {
     _tab = widget.initialStudy || widget.initialImportantOnly ? 1 : 0;
     _importantOnly = widget.initialImportantOnly &&
         widget.chapter.words.any((w) => widget.store.isFavorite(w.id));
-    if (_importantOnly && _mode == StudyMode.sentence) _mode = StudyMode.choice;
+    if (_filtered && _mode == StudyMode.sentence) _mode = StudyMode.choice;
     _startRound(_studyWords);
   }
 
@@ -162,7 +207,8 @@ class _ChapterPageState extends State<ChapterPage> {
       _lastCorrect = correct;
       if (correct) {
         _correctCount++;
-      } else {
+      } else if (!_wrongWords.contains(word)) {
+        // 2026-10-24 같은 단어가 오답 목록에 두 번 들어가 다시 풀기에 중복 출제되지 않게 막는다.
         _wrongWords.add(word);
       }
     });
@@ -195,7 +241,8 @@ class _ChapterPageState extends State<ChapterPage> {
     if (!mounted) return;
     setState(() {
       _mode = mode;
-      if (!_finished) _prepareQuestion();
+      // 2026-10-24 이미 답한 문제는 모드를 바꿔도 다시 열지 않는다. 다시 열면 정답·오답 점수가 중복 집계된다.
+      if (!_finished && !_answered) _prepareQuestion();
     });
   }
 
@@ -219,7 +266,12 @@ class _ChapterPageState extends State<ChapterPage> {
     if (ok != true || !mounted) return;
     await widget.store
         .resetLearned(widget.chapter.words.map((word) => word.id));
-    setState(() => _startRound(_studyWords));
+    setState(() {
+      // 2026-10-24 초기화로 이 챕터의 오답 기록도 지워지므로 틀린 단어 필터를 해제한다.
+      _wrongOnly = false;
+      _wrongSnapshot = const <Vocabulary>[];
+      _startRound(_studyWords);
+    });
   }
 
   @override
@@ -381,12 +433,23 @@ class _ChapterPageState extends State<ChapterPage> {
               onSelected: _changeImportantOnly,
               selectedColor: const Color(0xFFFFE6A4),
             )),
+            const SizedBox(width: 8),
+            // 2026-10-24 저장된 오답 기록 기준으로 이 챕터에서 틀린 단어만 다시 학습한다.
+            Expanded(child: FilterChip(
+              key: const ValueKey('wrong-only-filter'),
+              label: Text('✗ 틀린 단어만 (${_wrongCountInChapter()})'),
+              selected: _wrongOnly,
+              onSelected: _changeWrongOnly,
+              selectedColor: const Color(0xFFFFD6D0),
+            )),
           ]),
           const SizedBox(height: 8),
           Expanded(child: _studyWords.isEmpty
-            ? Center(child: Text(_importantOnly
-                ? '이 챕터에 별표 표시한 중요 단어가 없습니다.\n단어 목록에서 ☆를 눌러 추가해 주세요.'
-                : '학습할 단어가 없습니다.', textAlign: TextAlign.center))
+            ? Center(child: Text(_wrongOnly
+                ? '이 챕터에 틀린 단어가 없습니다.\n문제를 풀다 틀린 단어가 여기에 모입니다.'
+                : _importantOnly
+                    ? '이 챕터에 별표 표시한 중요 단어가 없습니다.\n단어 목록에서 ☆를 눌러 추가해 주세요.'
+                    : '학습할 단어가 없습니다.', textAlign: TextAlign.center))
             : _auto ? _buildAuto() : _buildManual()),
         ],
       ),
@@ -395,7 +458,7 @@ class _ChapterPageState extends State<ChapterPage> {
 
   Widget _buildManual() {
     // 2026-09-30 문장 만들기는 챕터별 5문제를 SentenceQuiz가 따로 진행한다.
-    if (_mode == StudyMode.sentence && !_importantOnly && widget.titleOverride == null) {
+    if (_mode == StudyMode.sentence && !_filtered && widget.titleOverride == null) {
       return Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -425,7 +488,7 @@ class _ChapterPageState extends State<ChapterPage> {
             mode: _mode,
             color: _colors.main,
             onSelect: _setMode,
-            allowSentence: !_importantOnly && widget.titleOverride == null &&
+            allowSentence: !_filtered && widget.titleOverride == null &&
                 SentenceBank.instance.forChapter(widget.chapter).isNotEmpty,
           ),
           const SizedBox(height: 10),
